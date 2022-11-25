@@ -10,24 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var diceImageViewOne: UIImageView!
-    @IBOutlet weak var diceImageViewTwo: UIImageView!
+
+    @IBOutlet weak var diceOne: UIImageView!
+    @IBOutlet weak var diceTwo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        diceOne.image = UIImage(imageLiteralResourceName: "DiceTwo")
         
-        diceImageViewOne.image = UIImage(imageLiteralResourceName: "DiceSix")
+        diceTwo.image = UIImage(imageLiteralResourceName: "DiceSix")
         
-        //Who What Value
-        diceImageViewTwo.image = UIImage(imageLiteralResourceName: "DiceTwo")
     }
     
-    @IBAction func rollButton(_ sender: UIButton) {
-        diceImageViewOne.image = UIImage(imageLiteralResourceName: "DiceFour")
+    //Update to have random function
+    @IBAction func rollButtonPress(_ sender: UIButton) {
+        diceOne.image = UIImage(imageLiteralResourceName: "DiceFour")
         
-        //Who What Value
-        diceImageViewTwo.image = UIImage(imageLiteralResourceName: "DiceFour")
+        diceTwo.image = UIImage(imageLiteralResourceName: "DiceFour")
     }
-
 }
 
