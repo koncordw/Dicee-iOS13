@@ -18,11 +18,6 @@ class ViewController: UIViewController {
     var leftDiceNumber = 0
     var rightDiceNumber = 5
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-    }
-    
     //Update to have random function
     @IBAction func rollButtonPress(_ sender: UIButton) {
         var leftDiceNumber = Int.random(in: 0...5)
