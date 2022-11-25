@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
     @IBOutlet weak var diceOne: UIImageView!
     @IBOutlet weak var diceTwo: UIImageView!
     
@@ -20,7 +19,6 @@ class ViewController: UIViewController {
         diceOne.image = UIImage(imageLiteralResourceName: "DiceTwo")
         
         diceTwo.image = UIImage(imageLiteralResourceName: "DiceSix")
-        
     }
     
     //Update to have random function
