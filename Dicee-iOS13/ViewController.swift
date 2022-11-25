@@ -12,19 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var diceOne: UIImageView!
     @IBOutlet weak var diceTwo: UIImageView!
-    
-    var imageList = [UIImage(imageLiteralResourceName: "DiceOne"), UIImage(imageLiteralResourceName: "DiceTwo"), UIImage(imageLiteralResourceName: "DiceThree"), UIImage(imageLiteralResourceName: "DiceFour"), UIImage(imageLiteralResourceName: "DiceFive"), UIImage(imageLiteralResourceName: "DiceSix")]
-    
-    var leftDiceNumber = 0
-    var rightDiceNumber = 5
-    
+
     //Update to have random function
     @IBAction func rollButtonPress(_ sender: UIButton) {
-        var leftDiceNumber = Int.random(in: 0...5)
-        var rightDiceNumber = Int.random(in: 0...5)
+        let imageList = [UIImage(imageLiteralResourceName: "DiceOne"), UIImage(imageLiteralResourceName: "DiceTwo"), UIImage(imageLiteralResourceName: "DiceThree"), UIImage(imageLiteralResourceName: "DiceFour"), UIImage(imageLiteralResourceName: "DiceFive"), UIImage(imageLiteralResourceName: "DiceSix")]
         
-        diceOne.image = imageList[leftDiceNumber]
-        diceTwo.image = imageList[rightDiceNumber]
+        diceOne.image = imageList[Int.random(in: 0...5)]
+        diceTwo.image = imageList[Int.random(in: 0...5)]
     }
 }
 
